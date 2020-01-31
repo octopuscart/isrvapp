@@ -90,7 +90,7 @@ class Api extends REST_Controller {
         } else {
             $this->db->insert('gcm_registration', $regArray);
         }
-        $this->response(array("status" => "done"));
+        $this->response(array("status" => "done", "regdata"=>$regArray));
     }
 
     //Mobile Booking APi
