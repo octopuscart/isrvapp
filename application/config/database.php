@@ -84,7 +84,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'bookbnev_padaiv',
 	'password' => 'G7}=DZyZH5@Z',
-	'database' => 'bookbnev_styletreat',
+	'database' => 'bookbnev_isrvapp',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

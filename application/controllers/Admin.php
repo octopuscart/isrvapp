@@ -23,6 +23,9 @@ class Admin extends CI_Controller {
         if ($this->user_id) {
             redirect('Account/profile');
         }
+        else{
+            redirect('Admin/login');
+        }
     }
 
     //Profile page
