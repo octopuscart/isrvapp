@@ -60,33 +60,20 @@
                                 <ul class="nav flex-column">
                                   
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo site_url("Admin/bookingReport") ?>">
+                                        <a class="nav-link" href="<?php echo site_url("Admin/downloadReport") ?>">
                                             <i class="fa fa-list-ol"></i>
-                                            Booking Reports
+                                            Download Reports
                                         </a>
                                     </li>
                                   
                                    
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo site_url("Admin/customers"); ?>">
-                                            <i class="fa fa-user"></i>
-                                            Customers
+                                        <a class="nav-link" href="<?php echo site_url("Admin/sendNotification"); ?>">
+                                            <i class="fa fa-share"></i>
+                                            Send Notification
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo site_url("Admin/sliderImages"); ?>">
-                                            <i class="fa fa-picture-o"></i>
-                                            Slider Images
-                                        </a>
-                                    </li>
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo site_url("Admin/gallaryImages"); ?>">
-                                            <i class="fa fa-pinterest-p"></i>
-                                            Gallery Images
-                                        </a>
-                                    </li>
-                                    
+                                  
                                     
 
 

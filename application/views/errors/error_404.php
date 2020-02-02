@@ -1,6 +1,3 @@
-<?php
-$this->load->view('layout/header');
-?>
 
 <!-- Content -->
 <div id="content"> 
@@ -21,7 +18,3 @@ $this->load->view('layout/header');
 </div>
 <!-- End Content --> 
 
-
-<?php
-$this->load->view('layout/footer');
-?>

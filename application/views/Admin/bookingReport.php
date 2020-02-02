@@ -3,14 +3,14 @@ $this->load->view('layout/headerAdmin');
 ?>
 
 <style>
-    
+
     .small_table{
         width: 100%;
     }
     .small_table td, .small_table th {
-    padding: 0px 5px;
-    line-height: 18px;
-}
+        padding: 0px 5px;
+        line-height: 18px;
+    }
 </style>
 <section class="sub-bnr" data-stellar-background-ratio="0.5" style="margin-bottom: 10px;">
     <div class="position-center-center">
@@ -30,14 +30,12 @@ $this->load->view('layout/headerAdmin');
             <table id="tableDataOrder" class="table table-bordered  tableDataOrder">
                 <thead>
                     <tr>
-                        
-                        <th style="width:50px">Booking No.</th>
-                        <th style="width:300px">Customer Information</th>
-                        <th style="width:300px">Services</th>
-                        <th style="width: 300px">Booking Type</th>
-                        <th style="width:300px">Message</th>
+
+                        <th style="width:50px">S. No.</th>
+                        <th style="width:300px">Manufacturer</th>
+                        <th style="width:300px">Model No.</th>
+                        <th style="width: 300px">UUID</th>                   
                         <th style="width:150px">Date/Time</th>
-                        <th style="width:100px"></th>
 
                     </tr>
                 </thead>
@@ -47,65 +45,43 @@ $this->load->view('layout/headerAdmin');
                         $count = 1;
                         foreach ($bookinglist as $key => $value) {
                             ?>
-                            <tr style="border-bottom: 1px solid #000;"  class="<?php echo $value->people > 9 ? 'highlightpeople' : ''; ?>">
-                                
+                            <tr style="border-bottom: 1px solid #000;"  class="">
+
                                 <td>
 
-                                    <?php echo $value->id; ?>
+                                    <?php echo $key + 1; ?>
 
 
                                 </td>
 
-                                <td>
-
-                                
-                                    <table class="small_table" >
-                                         <tr>
-                                            <th><i class="fa fa-user"></i> &nbsp; </th>
-                                            <td class="overtext">  <?php echo $value->name; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th><i class="fa fa-envelope"></i> &nbsp; </th>
-                                            <td class="overtext"> <a href="#" title="<?php echo $value->email; ?>"><?php echo $value->email; ?></a></td>
-                                        </tr>
-                                        <tr>
-                                            <th><i class="fa fa-phone"></i>  &nbsp;</th>
-                                            <td> <?php echo $value->contact; ?></td>
-                                        </tr>
-
-                                    </table>
-
-                                </td>
 
                                 <td>
                                     <?php
-                                    echo $value->select_table . "<br/>";
+                                    echo $value->manufacturer . "<br/>";
                                     ?>
                                 </td>
-                                
-                                
-                                
+
+
+
                                 <td>
                                     <?php
-                                    echo $value->booking_type . "<br/>";
+                                    echo $value->model . "<br/>";
                                     ?>
                                 </td>
-                                
+
                                 <td>
                                     <?php
-                                    echo $value->extra_remark . "<br/>";
+                                    echo $value->uuid . "<br/>";
                                     ?>
                                 </td>
 
 
                                 <td>
                                     <?php
-                                    echo $value->select_date . "<br/>". $value->select_time;
+                                    echo $value->datetime;
                                     ?>
                                 </td>
-                                <td>
-                                    <a href="<?php echo site_url("Admin/bookingDelete/" . $value->id); ?>" class="btn btn-danger btn-sm" style="    margin-top: 20%;">Delete <i class="fa fa-trash"></i></a>
-                                </td>
+
                             </tr>
                             <?php
                             $count++;
