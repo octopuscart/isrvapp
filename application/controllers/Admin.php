@@ -257,7 +257,7 @@ class Admin extends CI_Controller {
         $reglist = [];
         $this->db->order_by('id desc');
         $query = $this->db->get('gcm_registration');
-        $reglist2 = $query->result();
+        $reglist2 = $query->result_array();
 
         foreach ($reglist2 as $key => $value) {
             array_push($reglist, $value['reg_id']);
