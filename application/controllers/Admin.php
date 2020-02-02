@@ -7,7 +7,7 @@ class Admin extends CI_Controller {
     public function __construct() {
         parent::__construct();
         $this->load->database();
-        $this->API_ACCESS_KEY = 'AIzaSyCwKEcXKqMZWz3jmmOMOEQvKUXD1Pi2yuY';
+        $this->API_ACCESS_KEY = 'AIzaSyAdfkIEjioLvBogBZ5l5VO_SRTaei41yUI';
         // (iOS) Private key's passphrase.
         $this->passphrase = 'joashp';
         // (Windows Phone 8) The name of our push channel.
@@ -267,8 +267,8 @@ class Admin extends CI_Controller {
         if (isset($_POST['deleteService'])) {
             $id = $this->input->post("service_id");
             $this->db->where('id', $id); //set column_name and value in which row need to update
-            $this->db->delete("category_items");
-            redirect("Admin/services");
+            $this->db->delete("notification");
+            redirect("Admin/sendNotification");
         }
         if (isset($_POST['add_data'])) {
 

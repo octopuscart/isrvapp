@@ -53,6 +53,14 @@ $this->load->view('layout/headerAdmin');
 
                             </td>
                             <td><?php echo $value['datetime']; ?></td>
+                            <td>
+                                <form class="form-inline" action="#" method="POST">
+                                    <input type="hidden" name="service_id" value="<?php echo $value['id']; ?>">
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button type="submit" name="deleteService" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</button>
+                                    </div>
+                                </form>
+                            </td>
                         </tr>
                         <?php
                     }
